@@ -1,50 +1,56 @@
- var numberofdrum = document.querySelectorAll(".drum");
+var numberOfDrumButton = document.querySelectorAll(".drum").length;
+for (var i = 0; i <= numberOfDrumButton.length; i++) {
+  document.querySelectorAll("button")[i].addEventListener("click",
+    function () {
+    var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
+    }
+  );
+}
 
- for( var i=0; i<=numberofdrum.length;i++){
- document.querySelectorAll("button")[i].addEventListener("click",function(){
- alert("i got clicked")}
- );
- }
+document.addEventListener("keypress", function(event) {
+  makeSound(event.key);
+});
 
-// var audio = new Audio("tom-1.mp3")
-// var audio2 = new Audio("tom-2.mp3")
-// var audio3 = new Audio("tom-3.mp3")
-// var audio4 = new Audio("tom-4.mp3")
-// var audio5 = new Audio("snare.mp3")
-// var audio6 = new Audio("kick-bass.mp3")
-// var audio7 = new Audio("crash.mp3")
-// var drumAudio = document.querySelectorAll(".drum")
-// var btns = document.querySelectorAll("button")
-// var btnsss = document.querySelector("#asdfg")
 
-// for (i =i; i<=drumAudio.length; i++) {
-//     btns[i].addEventListener("click",(e)=>{
-//         const audioplayer =e.currentTarget.classList;
-//         if (audioplayer.contains("Sa")) {
-//             audio.play()
-//         }
-//        else if (audioplayer.contains("Re")) {
-//             audio2.play()
-//         }
-//        else if (audioplayer.contains("Ga")) {
-//             audio3.play()
-//         }
-//         else if (audioplayer.contains("Ma")) {
-//             audio4.play()
-//         }
-//         else if (audioplayer.contains("Pa")) {
-//             audio5.play()
-//         }
-//         else if (audioplayer.contains("Dha")) {
-//             audio6.play()
-//         }
-//         else if (audioplayer.contains("Ni")) {
-//             audio7.play()
-//         }
+function makeSound(key){
+  switch (key) {
+    case "s":
+      var tom1 = new Audio('sound/tom-1.mp3');
+      tom1.play();
+      break;
 
-//     });
-//    
-    
+    case "r":
+      var tom2 = new Audio('sound/tom-2.mp3');
+      tom2.play();
+      break;
 
-    
-    
+    case "g":
+      var tom3 = new Audio('sound/tom-3.mp3');
+      tom3.play();
+      break;
+
+    case "m":
+      var tom4 = new Audio('sound/tom-4.mp3');
+      tom4.play();
+      break;
+
+    case "p":
+      var snare = new Audio('sound/snare.mp3');
+      snare.play();
+      break;
+
+    case "d":
+      var crash = new Audio('sound/crash.mp3');
+      crash.play();
+      break;
+
+    case "n":
+      var kick = new Audio('sound/kick-bass.mp3');
+      kick.play();
+      break;
+  
+    default: console.log(buttonInnerHTML);
+      break;
+  }
+}
