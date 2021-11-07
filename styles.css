@@ -16,31 +16,31 @@ footer {
   font-family: sans-serif;
 }
 /* SaReGaMaPaDhaNi */
-.Sa  {
+.s  {
   background-image: url("images/tom1.png");
 }
 
-.Re {
+.r {
   background-image: url("images/tom2.png");
 }
 
-.Ga {
+.g {
   background-image: url("images/tom3.png");
 }
 
-.Ma {
+.m {
   background-image: url("images/tom4.png");
 }
 
-.Pa {
+.p {
   background-image: url("images/snare.png");
 }
 
-.Dha {
+.d {
   background-image: url("images/crash.png");
 }
 
-.Ni {
+.n {
   background-image: url("images/kick.png");
 }
 
